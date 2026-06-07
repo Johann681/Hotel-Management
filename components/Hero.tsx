@@ -5,7 +5,8 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, Users } from "lucide-react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Users from "lucide-react";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
