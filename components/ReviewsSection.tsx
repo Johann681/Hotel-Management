@@ -9,64 +9,58 @@ import AnimatedCard from "./AnimatedCard";
 export default function ReviewsSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".section-title-reviews",
-      { x: -60, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      }
-    );
-  }, { scope: sectionRef });
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".section-title-reviews",
+        { x: -60, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    },
+    { scope: sectionRef }
+  );
 
   return (
-    <section ref={sectionRef} id="reviews" className="py-24 bg-bg-primary border-t border-border">
+    <section ref={sectionRef} id="reviews" className="py-28 bg-[#F5F5F7] border-t border-border">
       <div className="max-w-7xl mx-auto px-6">
-        
-        {/* Section Header */}
-        <div className="section-title-reviews mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-center md:text-left">
-            <span className="text-blue-glow">04</span>{" "}
-            <span className="text-gold">/ Guest Experiences</span>
+        <div className="section-title-reviews mb-16 text-center">
+          <p className="text-sm uppercase tracking-[0.4em] text-gold mb-4">04</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-text-primary tracking-tight">
+            Guest Experiences
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((review, i) => (
-            <AnimatedCard key={i} staggerIndex={i} className="h-full">
-              <div className="group bg-bg-primary border border-border p-8 h-full rounded-sm flex flex-col relative transition-all duration-300 hover:border-blue-glow hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                
-                {/* Large Quote Mark */}
-                <div className="absolute top-4 left-6 text-7xl text-gold/10 font-serif leading-none select-none">
+        <div className="grid gap-8 md:grid-cols-3">
+          {reviews.map((review, index) => (
+            <AnimatedCard key={index} staggerIndex={index} className="h-full">
+              <article className="group relative overflow-hidden rounded-[28px] border border-border bg-white p-8 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-blue-glow">
+                <div className="absolute top-6 left-6 text-[5rem] text-gold/10 leading-none select-none pointer-events-none">
                   &ldquo;
                 </div>
-
-                <div className="flex gap-1 mb-6 mt-4 relative z-10">
-                  {[...Array(review.stars)].map((_, i) => (
-                    <span key={i} className="text-gold text-xl">★</span>
+                <div className="relative z-10 flex items-center gap-2 mb-6">
+                  {Array.from({ length: review.stars }).map((_, starIndex) => (
+                    <span key={starIndex} className="text-gold text-xl">★</span>
                   ))}
                 </div>
-                
-                <p className="text-text-primary text-lg font-medium italic mb-8 flex-grow relative z-10 leading-relaxed">
-                  &quot;{review.text}&quot;
+                <p className="relative z-10 text-lg italic leading-8 text-text-primary mb-10">
+                  "{review.text}"
                 </p>
-                
-                <div className="border-t border-border pt-4 mt-auto">
-                  <h4 className="font-bold text-text-primary">{review.author}</h4>
-                  <p className="text-xs text-text-muted font-semibold uppercase tracking-wider mt-1">
+                <div className="relative z-10 border-t border-border pt-6">
+                  <p className="font-bold text-text-primary">{review.author}</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-text-muted mt-1">
                     {review.role}
                   </p>
                 </div>
-
-              </div>
+              </article>
             </AnimatedCard>
           ))}
         </div>

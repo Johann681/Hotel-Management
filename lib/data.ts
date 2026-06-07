@@ -3,7 +3,8 @@ export const rooms = [
     id: "standard",
     name: "Standard Room",
     price: 45000,
-    gradient: "linear-gradient(135deg, #667eea, #764ba2)",
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&auto=format&fit=crop",
     desc: "A well-appointed room for the focused traveler.",
     features: ["WiFi", "AC", "TV", "Work Desk", "Housekeeping"],
   },
@@ -11,7 +12,8 @@ export const rooms = [
     id: "deluxe",
     name: "Deluxe Room",
     price: 85000,
-    gradient: "linear-gradient(135deg, #11998e, #38ef7d)",
+    image:
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80&auto=format&fit=crop",
     desc: "Elevated comfort with premium city views.",
     features: ["WiFi", "AC", "TV", "Mini Bar", "Bathtub", "City View"],
   },
@@ -19,7 +21,8 @@ export const rooms = [
     id: "executive",
     name: "Executive Suite",
     price: 150000,
-    gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)",
+    image:
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80&auto=format&fit=crop",
     desc: "Full suite experience with lounge and kitchen.",
     features: ["WiFi", "AC", "Lounge", "Kitchen", "Panoramic View"],
   },
@@ -27,7 +30,8 @@ export const rooms = [
     id: "presidential",
     name: "Presidential Suite",
     price: 320000,
-    gradient: "linear-gradient(135deg, #C9A84C, #1a1a2e)",
+    image:
+      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80&auto=format&fit=crop",
     desc: "The pinnacle of luxury. Unmatched in detail.",
     features: ["WiFi", "AC", "Private Pool", "Butler", "Penthouse"],
   },
@@ -38,58 +42,62 @@ export const menuItems = [
     id: "breakfast",
     name: "Breakfast",
     priceRange: "₦5,000–₦12,000",
-    desc: "Fresh continental and Nigerian breakfast options",
+    desc: "Fresh continental and Nigerian breakfast options.",
     icon: "🌅",
+    image:
+      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800&q=80&auto=format&fit=crop",
     tags: ["Continental", "Nigerian", "Buffet"],
   },
   {
     id: "lunch",
     name: "Business Lunch",
     priceRange: "₦8,000–₦18,000",
-    desc: "Power lunches for the corporate mind",
+    desc: "Power lunches for the corporate mind.",
     icon: "💼",
+    image:
+      "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80&auto=format&fit=crop",
     tags: ["Set Menu", "À la carte", "Private Dining"],
   },
   {
     id: "dinner",
     name: "Fine Dining",
     priceRange: "₦15,000–₦45,000",
-    desc: "An evening experience unlike any other",
+    desc: "An evening experience unlike any other.",
     icon: "🍷",
+    image:
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80&auto=format&fit=crop",
     tags: ["Reservations", "Wine Pairing", "Live Music"],
   },
 ];
 
 export const amenities = [
   {
-    name: "High-Speed WiFi",
-    desc: "Enterprise-grade connectivity throughout the hotel",
-    icon: "🌐",
-  },
-  {
     name: "Infinity Pool",
-    desc: "Rooftop pool with panoramic city views",
+    desc: "Rooftop pool with panoramic views of Victoria Island.",
     icon: "🏊",
+    image:
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Fitness Center",
-    desc: "24/7 fully equipped modern gymnasium",
+    desc: "24/7 fully equipped modern gymnasium.",
     icon: "💪",
+    image:
+      "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Luxury Spa",
-    desc: "Full-service spa and wellness treatments",
+    desc: "Restorative treatments and holistic wellness rituals.",
     icon: "💆",
+    image:
+      "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80&auto=format&fit=crop",
   },
   {
-    name: "Conference Rooms",
-    desc: "State-of-the-art boardrooms for 5 to 200 guests",
+    name: "Meeting & Conference",
+    desc: "Executive event spaces for corporate gatherings.",
     icon: "🏢",
-  },
-  {
-    name: "Airport Shuttle",
-    desc: "Complimentary transfers available on request",
-    icon: "✈️",
+    image:
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80&auto=format&fit=crop",
   },
 ];
 

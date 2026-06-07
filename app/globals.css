@@ -3,35 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: light;
 }
 
-body {
-  color: theme('colors.text-primary');
-  background: theme('colors.bg-primary');
-  overflow-x: hidden;
+html {
   scroll-behavior: smooth;
 }
 
-/* Custom selection */
-::selection {
-  background: theme('colors.gold');
-  color: white;
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #FFFFFF;
+  color: #0A0A0F;
+  overflow-x: hidden;
+  font-feature-settings: "cv02" 1, "cv03" 1, "ss01" 1;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #C9A84C;
+  color: #FFFFFF;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  background: #FFFFFF;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18);
+}
+
+::webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: theme('colors.bg-secondary');
+  background: #F5F5F7;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.border');
-  border-radius: 5px;
+  background: #E5E5E5;
+  border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.text-muted');
+  background: #C9A84C;
 }
