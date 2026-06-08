@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useRef } from "react";
@@ -53,7 +52,7 @@ export default function ReviewsSection() {
                   ))}
                 </div>
                 <p className="relative z-10 text-lg italic leading-8 text-text-primary mb-10">
-                  "{review.text}"
+                  &quot;{review.text}&quot;
                 </p>
                 <div className="relative z-10 border-t border-border pt-6">
                   <p className="font-bold text-text-primary">{review.author}</p>

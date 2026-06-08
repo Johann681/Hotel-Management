@@ -1,4 +1,14 @@
-export const rooms = [
+export interface Room {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  desc: string;
+  features: string[];
+  gradient: string;
+}
+
+export const rooms: Room[] = [
   {
     id: "standard",
     name: "Standard Room",
@@ -7,6 +17,7 @@ export const rooms = [
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&auto=format&fit=crop",
     desc: "A well-appointed room for the focused traveler.",
     features: ["WiFi", "AC", "TV", "Work Desk", "Housekeeping"],
+    gradient: "linear-gradient(135deg, #1a1a2e, #16213e)",
   },
   {
     id: "deluxe",
@@ -16,6 +27,7 @@ export const rooms = [
       "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80&auto=format&fit=crop",
     desc: "Elevated comfort with premium city views.",
     features: ["WiFi", "AC", "TV", "Mini Bar", "Bathtub", "City View"],
+    gradient: "linear-gradient(135deg, #2a2f4a, #1b2741)",
   },
   {
     id: "executive",
@@ -25,6 +37,7 @@ export const rooms = [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80&auto=format&fit=crop",
     desc: "Full suite experience with lounge and kitchen.",
     features: ["WiFi", "AC", "Lounge", "Kitchen", "Panoramic View"],
+    gradient: "linear-gradient(135deg, #11203a, #0d1632)",
   },
   {
     id: "presidential",
@@ -34,6 +47,7 @@ export const rooms = [
       "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80&auto=format&fit=crop",
     desc: "The pinnacle of luxury. Unmatched in detail.",
     features: ["WiFi", "AC", "Private Pool", "Butler", "Penthouse"],
+    gradient: "linear-gradient(135deg, #231f20, #12111a)",
   },
 ];
 
